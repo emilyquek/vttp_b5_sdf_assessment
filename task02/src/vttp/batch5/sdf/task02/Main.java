@@ -19,6 +19,7 @@ public class Main implements Cloneable {
 			System.out.print("\n");
 		} else {
 			System.err.println("Invalid number of arguments! Please insert file name!");
+			System.exit(0);
 		}
 
 		char[][] board = new char[3][3];
