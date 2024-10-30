@@ -10,9 +10,12 @@ public class Main implements Cloneable {
 
 	public static void main(String[] args) throws Exception {
 		String fileName = "";
+		String dirPath = "";
 		if (args.length > 0) {
-			fileName = args[0];
-			System.out.println("Processing: TTT/" + fileName);
+			String[] dir = args[0].split("/");
+			dirPath = dir[0];
+			fileName = dir[1];
+			System.out.println("Processing: " + dirPath + "/" + fileName);
 			System.out.print("\n");
 		} else {
 			System.err.println("Invalid number of arguments! Please insert file name!");
@@ -20,7 +23,7 @@ public class Main implements Cloneable {
 
 		char[][] board = new char[3][3];
 
-		File file = new File ("task02/TTT", fileName);
+		File file = new File ("task02/"+dirPath, fileName);
 		Reader reader = new FileReader(file);
 		BufferedReader breader = new BufferedReader(reader);
 		String line = "q";
