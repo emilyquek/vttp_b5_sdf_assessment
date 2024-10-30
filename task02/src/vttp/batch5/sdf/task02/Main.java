@@ -62,7 +62,7 @@ public class Main implements Cloneable {
 				}
 			}
 		}
-		
+
 		int utility;
 		
 		for (String pos : allEmptyPositions) {
@@ -113,5 +113,6 @@ public class Main implements Cloneable {
 			System.out.printf("y=%s, x=%s, utility=%d\n", coordinate[0], coordinate[1], utility);
 			newBoard[Integer.parseInt(coordinate[0])][Integer.parseInt(coordinate[1])] = '.';
 		}	
+		breader.close();
 	}
 }

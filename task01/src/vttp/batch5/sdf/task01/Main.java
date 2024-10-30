@@ -7,7 +7,6 @@ import java.io.IOException;
 import java.io.Reader;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
@@ -49,6 +48,7 @@ public class Main {
 				CsvEntry ce = new CsvEntry(season, month, holiday, weekday, weather, total);
 				allCsvEntries.put(total, ce);
 		}
+		breader.close();
 		List<Integer> numOfCyclists = new ArrayList<>();
 		numOfCyclists.addAll(allCsvEntries.keySet());
 		Collections.sort(numOfCyclists, Collections.reverseOrder());
