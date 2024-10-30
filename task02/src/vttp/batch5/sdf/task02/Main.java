@@ -62,8 +62,7 @@ public class Main implements Cloneable {
 				}
 			}
 		}
-
-		System.out.println(allEmptyPositions);
+		
 		int utility;
 		
 		for (String pos : allEmptyPositions) {
